@@ -1,4 +1,4 @@
-from flask import Flask,redirect,url_for,request
+from flask import Flask,redirect,url_for,request,render_template
 
 app = Flask(__name__)
 
@@ -77,6 +77,12 @@ def login():
 @app.route('/template')
 def index():
    return '<html><body><h1 style="color:blue;">Hello world</h1></body></html>'
+
+@app.route('/hello/<user>')
+def hello_name(user):
+	return render_template("hello.html", name=user)
+
+name
 
 if __name__ == "__main__":
 	app.run(debug=True)
