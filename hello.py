@@ -82,7 +82,20 @@ def index():
 def hello_name(user):
 	return render_template("hello.html", name=user)
 
-name
+#11111111111111111111111111111111111111111111111111111111
+
+@app.route('/login/<namein>')
+def login_func(namein):
+	return render_template("index.html",name=namein)
+
+
+@app.route('/login2')
+def login_function():
+	return render_template("index.html")	
+
+
+
+
 
 if __name__ == "__main__":
 	app.run(debug=True)
