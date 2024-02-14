@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>signinoutput</title>
+	<style type="text/css">
+		body{
+			background-color:indianred;
+		}
+		div{
+			background-color:green;
+			width:600px;
+			height:200px;
+			border-color: black;
+			border-width: 40px;
+			border-style:inset;
+			text-align:center;
+			font-weight:bold;
+			box-shadow:20px 20px black;
+		}
+		span{
+			color:white;
+		}
+
+		input{
+			position:relative;
+			top:-20px;
+			font-size:20px;
+
+		}
+	</style>
+	<script type="text/javascript">
+		function message(){
+			alert("DATA HAS BEEN CONFIRMED...");
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<big><big><big><big><p>Your User Name is<span>: {{namein}}</span></p></big></big></big></big>
+		<big><big><big><big><p>Your User Password is<span>: {{passin}}</span></p></big></big></big></big>
+		<a href="http://127.0.0.1:5000/signin_page"><input type="button" name="confirm" onclick="message()" value="CONFIRM"></a>
+	</div>
+</body>
+</html>
