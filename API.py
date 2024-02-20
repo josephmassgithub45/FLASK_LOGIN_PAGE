@@ -1,4 +1,7 @@
 from flask import Flask,redirect,url_for,request,render_template
+import json
+
+reg_database="DATABASE\REGISTER.JSON"
 
 app = Flask(__name__)
 
@@ -8,10 +11,34 @@ app = Flask(__name__)
 
 #PYTHON SIGN IN APP
 
+#DISPLAY ROUTES
+
+@app.route("/registeration_page")
+def registeration():
+	return render_template("register.html")
+
+
 @app.route('/signin_page')
 def signin_func():
 	return render_template("signin.html")
 
+
+#FUNCTION ROUTES
+
+@app.route("/register",methods=['POST','GET'])
+def register_database():
+	item_data={}
+	with open(reg_database,"r") as file:
+		temp=json.load(file)
+		
+	item_data["username"]=request.form["usersname"]
+	item_data["userpassword"]=request.form["userspassword"]
+
+	temp.append(item_data)
+	with open(reg_database,"w") as file:
+		json.dump(temp,file,indent=4)
+	
+	return render_template("signin.html")
 
 	
 
