@@ -29,6 +29,12 @@ def signin_func():
 
 #FUNCTION ROUTES
 
+
+@app.route("/homepage",methods=['POST','GET'])
+def home_database():
+
+	
+
 @app.route("/register",methods=['POST','GET'])
 def register_database():
 	item_data={}
