@@ -13,6 +13,10 @@ app = Flask(__name__)
 
 #DISPLAY ROUTES
 
+@app.route("/home_page")
+def home():
+	return render_template("homepage.html")
+
 @app.route("/registeration_page")
 def registeration():
 	return render_template("register.html")
