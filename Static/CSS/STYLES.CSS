@@ -1,39 +1,5 @@
-body {
-    background-image: url('flask_test/BLUE LIGHT WAVES  AI LOGO.jpg');
-    background-size: cover;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-}
-
-.mclass {
-    width: 250px;
-    height: 30px;
-}
-
-form {
-    text-align: center;
-}
-
-input {
-    font-size: x-large;
-}
-
-#btn1 {
-    width: 150px;
-    height: 50px;
-    font-weight: bolder;
-    font-size: larger;
-    color: white;
-    background-color: blue;
-}
-
-#div1 {
-    width: 400px;
-    height: 50px;
-    background-color: lightblue;
-    position: relative;
-    top: 50px;
-}
+#mylogo{
+            height:50PX;
+            width:50px;
+            background-color:white;
+        }   
