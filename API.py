@@ -64,11 +64,13 @@ def register_database():
 
 @app.route('/signin',methods = ['POST', 'GET'])
 def signin():
-   if request.method == 'POST' and len(request.form['username'])>0 and len(request.form['userpassword'])>=5:
-	   name = request.form['username']
-	   password = request.form['userpassword']
-	   return render_template('signinoutput.html',namein=name,passin=password)
-   else:
+	if request.method == 'POST' and len(request.form['username'])>0:
+		data = json.loads(open(reg_database).read())
+
+		username = data[0]["username"]
+		userpassword = data[0]["userpassword"]
+		return username+"-------"+userpassword
+	else:
 	   return render_template('signinerror.html')
 	   
 	   
