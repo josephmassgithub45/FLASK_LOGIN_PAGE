@@ -1,10 +1,52 @@
 [
     {
-        "username": "MAN",
-        "userpassword": "12345"
+        "firstname": "Mary",
+        "middlename": "Princess",
+        "lastname": "Kamara",
+        "gender": "Female",
+        "contact": "078454545",
+        "email": "Mary@yahoo.com",
+        "username": "mary111@waves",
+        "userpassword": "1234567"
     },
     {
-        "username": "joseph",
-        "userpassword": "123456789"
+        "FIRSTNAME": "Mary",
+        "MIDDLENAME": "Princess",
+        "LASTNAME": "Kamara",
+        "GENDER": "Female",
+        "CONTACT": "078454545",
+        "EMAIL": "Mary@yahoo.com",
+        "USERNAME": "mary111@waves",
+        "USERPASSWORD": "1234567"
+    },
+    {
+        "FIRSTNAME": "",
+        "MIDDLENAME": "",
+        "LASTNAME": "",
+        "GENDER": "",
+        "CONTACT": "",
+        "EMAIL": "",
+        "USERNAME": "",
+        "USERPASSWORD": ""
+    },
+    {
+        "FIRSTNAME": "fsdfdafdsfdsfds",
+        "MIDDLENAME": "sfdsfsfdsfsdf",
+        "LASTNAME": "sdfsfsdfsfsdf",
+        "GENDER": "sfsfsfdf",
+        "CONTACT": "123124324",
+        "EMAIL": "fdgdggdgd",
+        "USERNAME": "dfgdgdgfdgd",
+        "USERPASSWORD": "dgdgdfgdgg"
+    },
+    {
+        "FIRSTNAME": "fsdfdafdsfdsfds",
+        "MIDDLENAME": "sfdsfsfdsfsdf",
+        "LASTNAME": "sdfsfsdfsfsdf",
+        "GENDER": "sfsfsfdf",
+        "CONTACT": "123124324",
+        "EMAIL": "fdgdggdgd",
+        "USERNAME": "dfgdgdgfdgd",
+        "USERPASSWORD": "dgdgdfgdgg"
     }
 ]

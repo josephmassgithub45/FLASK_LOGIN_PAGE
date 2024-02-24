@@ -5,8 +5,9 @@ reg_database="DATABASE\REGISTER.JSON"
 
 app = Flask(__name__)
 
-
-   
+'''
+server="http://127.0.0.1:5000"
+'''
 #111111111111111111111111111111111111111111111111111111111
 
 #PYTHON SIGN IN APP
@@ -16,6 +17,7 @@ app = Flask(__name__)
 @app.route("/home_page")
 def home():
 	return render_template("homepage.html")
+
 
 @app.route("/registeration_page")
 def registeration():
@@ -29,26 +31,34 @@ def signin_func():
 
 #FUNCTION ROUTES
 
-
+'''
 @app.route("/homepage",methods=['POST','GET'])
 def home_database():
-
-	
+'''
 
 @app.route("/register",methods=['POST','GET'])
 def register_database():
-	item_data={}
-	with open(reg_database,"r") as file:
-		temp=json.load(file)
+	if request.method == 'POST' and len(request.form['username'])>0 and len(request.form['userpassword'])>=7 and len(request.form['contact'])>0:
+		item_data={}
+		with open(reg_database,"r") as file:
+			temp=json.load(file)
 		
-	item_data["username"]=request.form["usersname"]
-	item_data["userpassword"]=request.form["userspassword"]
+		item_data["FIRSTNAME"]=request.form["firstname"]
+		item_data["MIDDLENAME"]=request.form["middlename"]
+		item_data["LASTNAME"]=request.form["lastname"]
+		item_data["GENDER"]=request.form["gender"]
+		item_data["CONTACT"]=request.form["contact"]
+		item_data["EMAIL"]=request.form["email"]
+		item_data["USERNAME"]=request.form["username"]
+		item_data["USERPASSWORD"]=request.form["userpassword"]
 
-	temp.append(item_data)
-	with open(reg_database,"w") as file:
-		json.dump(temp,file,indent=4)
+		temp.append(item_data)
+		with open(reg_database,"w") as file:
+			json.dump(temp,file,indent=4)
 	
-	return render_template("signin.html")
+		return render_template("signin.html")
+	else:
+		return render_template('signinerror.html')
 
 	
 
