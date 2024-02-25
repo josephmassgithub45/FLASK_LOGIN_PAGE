@@ -52,11 +52,12 @@ def register_database():
 		item_data["USERNAME"]=request.form["username"]
 		item_data["USERPASSWORD"]=request.form["userpassword"]
 
-		temp.append(item_data)
+		temp["registeration_data"].append(item_data)
 		with open(reg_database,"w") as file:
 			json.dump(temp,file,indent=4)
 	
-		return render_template("signin.html")
+		#return temp["registeration_data"]
+		render_template("signin.html")
 	else:
 		return render_template('signinerror.html')
 
@@ -68,11 +69,11 @@ def signin():
 		with open(reg_database,"r") as file:
 			temp=json.load(file)
 			
-		for i in temp:
-			return i
 		
 		user_name_h = request.form["username"]
 		user_password_h = request.form["userpassword"]
+
+		
 		'''
 		username = temp[0]["username"]
 		userpassword = temp[0]["userpassword"]
