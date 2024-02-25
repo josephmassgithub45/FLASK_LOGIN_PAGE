@@ -12,7 +12,7 @@ server="http://127.0.0.1:5000"
 
 #PYTHON SIGN IN APP
 
-#DISPLAY ROUTES
+#----------------------DISPLAY ROUTES----------------------
 
 @app.route("/home_page")
 def home():
@@ -29,7 +29,7 @@ def signin_func():
 	return render_template("signin.html")
 
 
-#FUNCTION ROUTES
+#----------------------FUNCTION ROUTES---------------------
 
 '''
 @app.route("/homepage",methods=['POST','GET'])
@@ -65,15 +65,22 @@ def register_database():
 @app.route('/signin',methods = ['POST', 'GET'])
 def signin():
 	if request.method == 'POST' and len(request.form['username'])>0:
-		data = json.loads(open(reg_database).read())
-
-		username = data[0]["username"]
-		userpassword = data[0]["userpassword"]
+		with open(reg_database,"r") as file:
+			temp=json.load(file)
+			
+		for i in temp:
+			return i
+		
+		user_name_h = request.form["username"]
+		user_password_h = request.form["userpassword"]
+		'''
+		username = temp[0]["username"]
+		userpassword = temp[0]["userpassword"]
 		return username+"-------"+userpassword
+		'''
+		
 	else:
-	   return render_template('signinerror.html')
-	   
-	   
+	   return render_template('signinerror.html')   
 
 
 if __name__ == "__main__":
