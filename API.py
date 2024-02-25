@@ -57,7 +57,7 @@ def register_database():
 			json.dump(temp,file,indent=4)
 	
 		#return temp["registeration_data"]
-		render_template("signin.html")
+		return render_template("signin.html")
 	else:
 		return render_template('signinerror.html')
 
