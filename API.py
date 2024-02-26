@@ -38,28 +38,31 @@ def home_database():
 
 @app.route("/register",methods=['POST','GET'])
 def register_database():
-	if request.method == 'POST' and len(request.form['username'])>0 and len(request.form['userpassword'])>=7 and len(request.form['contact'])>0:
-		item_data={}
-		with open(reg_database,"r") as file:
-			temp=json.load(file)
+	if request.method == 'POST' and len(request.form['username'])>0 and len(request.form['contact'])>0 and len(request.form['firstname'])>0 and len(request.form['lastname'])>0 and len(request.form['gender'])>0 and len(request.form['email'])>0:
+		if len(request.form['userpassword'])>=7: 
+			item_data={}
+			with open(reg_database,"r") as file:
+				temp=json.load(file)
 		
-		item_data["FIRSTNAME"]=request.form["firstname"]
-		item_data["MIDDLENAME"]=request.form["middlename"]
-		item_data["LASTNAME"]=request.form["lastname"]
-		item_data["GENDER"]=request.form["gender"]
-		item_data["CONTACT"]=request.form["contact"]
-		item_data["EMAIL"]=request.form["email"]
-		item_data["USERNAME"]=request.form["username"]
-		item_data["USERPASSWORD"]=request.form["userpassword"]
+			item_data["FIRSTNAME"]=request.form["firstname"]
+			item_data["MIDDLENAME"]=request.form["middlename"]
+			item_data["LASTNAME"]=request.form["lastname"]
+			item_data["GENDER"]=request.form["gender"]
+			item_data["CONTACT"]=request.form["contact"]
+			item_data["EMAIL"]=request.form["email"]
+			item_data["USERNAME"]=request.form["username"]
+			item_data["USERPASSWORD"]=request.form["userpassword"]
 
-		temp["registeration_data"].append(item_data)
-		with open(reg_database,"w") as file:
-			json.dump(temp,file,indent=4)
+			temp["registeration_data"].append(item_data)
+			with open(reg_database,"w") as file:
+				json.dump(temp,file,indent=4)
 	
-		#return temp["registeration_data"]
-		return render_template("signin.html")
+			#return temp["registeration_data"]
+			return render_template("signin.html")
+		else:
+			return render_template("registerationpasserror.html")
 	else:
-		return render_template('signinerror.html')
+		return render_template('registerationerror.html')
 
 	
 
@@ -73,6 +76,10 @@ def signin():
 		user_name_h = request.form["username"]
 		user_password_h = request.form["userpassword"]
 
+		if user_name_h in temp["registeration_data"]:
+			return "signed in"
+		else:
+			return "not signed in"
 		
 		'''
 		username = temp[0]["username"]

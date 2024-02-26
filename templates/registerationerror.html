@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>signin_page</title>
+	<style type="text/css">
+		body{
+			text-align:center;
+			background-color:green;
+			font-weight:bold;
+		}
+
+		input{
+			font-size:30px;
+			font-weight:bold;
+		}
+	</style>
+	<script type="text/javascript">
+		function message(){
+			alert("Fill in the registeration page Correctly...")
+		}
+	</script>
+</head>
+<body onload="message()">
+	<big><big><big><h1>Registeration Page</h1></big></big></big>
+	<form action="http://127.0.0.1:5000/register" method="POST">
+		<input type="text" name="firstname" placeholder="ENTER FIRST NAME"><br><br>
+		<input type="text" name="middlename" placeholder="ENTER MIDDLE NAME"><br><br>
+		<input type="text" name="lastname" placeholder="ENTER LAST NAME"><br><br>
+		<input type="text" name="gender" placeholder="ENTER GENDER"><br><br>
+		<input type="number" name="contact" placeholder="ENTER CONTACT"><br><br>
+		<input type="text" name="email" placeholder="ENTER EMAIL"><br><br>
+		<input type="text" name="username" placeholder="ENTER USER NAME"><br><br>
+		<input type="text" name="userpassword" placeholder="ENTER USER PASSWORD">
+		<br><br>
+		<input type="submit" name="button" value="Register">
+	</form>
+</body>
+</html>
