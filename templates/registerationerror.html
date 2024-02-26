@@ -7,13 +7,27 @@
 	<style type="text/css">
 		body{
 			text-align:center;
-			background-color:green;
+			background-size:100% 100%;
+			min-height:100vh;
 			font-weight:bold;
 		}
 
+		h1{
+			color:blue;
+		}
+
 		input{
-			font-size:30px;
+			background-color:lightblue;
+			font-size:20px;
 			font-weight:bold;
+		}
+
+		::placeholder{
+			color:blue;
+		}
+
+		#inpb{
+			color:blue;
 		}
 	</style>
 	<script type="text/javascript">
@@ -34,7 +48,7 @@
 		<input type="text" name="username" placeholder="ENTER USER NAME"><br><br>
 		<input type="text" name="userpassword" placeholder="ENTER USER PASSWORD">
 		<br><br>
-		<input type="submit" name="button" value="Register">
+		<input id="inpb" type="submit" name="button" value="Register">
 	</form>
 </body>
 </html>

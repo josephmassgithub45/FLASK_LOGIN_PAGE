@@ -73,13 +73,6 @@ def signin():
 			temp=json.load(file)
 			
 		
-		user_name_h = request.form["username"]
-		user_password_h = request.form["userpassword"]
-
-		if user_name_h in temp["registeration_data"]:
-			return "signed in"
-		else:
-			return "not signed in"
 		
 		'''
 		username = temp[0]["username"]
