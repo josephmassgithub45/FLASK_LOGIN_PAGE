@@ -28,6 +28,10 @@ def registeration():
 def signin_func():
 	return render_template("signin.html")
 
+@app.route("/signin_to_registeration")
+def signregister():
+	return render_template("register.html")
+
 
 #----------------------FUNCTION ROUTES---------------------
 
@@ -68,11 +72,20 @@ def register_database():
 
 @app.route('/signin',methods = ['POST', 'GET'])
 def signin():
-	if request.method == 'POST' and len(request.form['username'])>0:
+	if request.method == 'POST' and len(request.form['username'])>0 and len(request.form['userpassword'])>6:
 		with open(reg_database,"r") as file:
 			temp=json.load(file)
-			
 		
+		usernamein=request.form['username']
+		userpasswordin=request.form['userpassword']
+			
+		index=0
+		while index<len(temp.get("registeration_data")):
+			if usernamein==temp.get("registeration_data")[index].get("USERNAME") and userpasswordin==temp.get("registeration_data")[index].get("USERPASSWORD"):
+				return render_template("startpage.html")
+			index=index+1
+		return render_template("startpageerror.html")
+	
 		
 		'''
 		username = temp[0]["username"]
