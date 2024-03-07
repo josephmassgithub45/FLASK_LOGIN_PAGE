@@ -1,5 +1,5 @@
 {
-    "registeration_data": [
+    "registration_data": [
         {
             "FIRSTNAME": "MOHAMED",
             "MIDDLENAME": "VANDI",
@@ -49,6 +49,26 @@
             "EMAIL": "UMU@GMAIL.COM",
             "USERNAME": "UMU@BLW",
             "USERPASSWORD": "14921492"
+        },
+        {
+            "FIRSTNAME": "fgfhj",
+            "MIDDLENAME": "jkgjhgjhg",
+            "LASTNAME": "gjghjgj",
+            "GENDER": "hgjgjhghgj",
+            "CONTACT": "5765765765",
+            "EMAIL": "hjhgjgjhgjgjhg",
+            "USERNAME": "JOSEPH@BLW",
+            "USERPASSWORD": "24682468"
+        },
+        {
+            "FIRSTNAME": "MOHAMED",
+            "MIDDLENAME": "",
+            "LASTNAME": "KAMARA",
+            "GENDER": "MALE",
+            "CONTACT": "4365456245",
+            "EMAIL": "MOHAMED@123",
+            "USERNAME": "MOHAMED@BLW",
+            "USERPASSWORD": "123456789"
         }
     ]
 }

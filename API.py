@@ -19,7 +19,7 @@ def home():
 	return render_template("homepage.html")
 
 
-@app.route("/registeration_page")
+@app.route("/registration_page")
 def registeration():
 	return render_template("register.html")
 
@@ -28,7 +28,7 @@ def registeration():
 def signin_func():
 	return render_template("signin.html")
 
-@app.route("/signin_to_registeration")
+@app.route("/signin_to_registration")
 def signregister():
 	return render_template("register.html")
 
@@ -57,16 +57,16 @@ def register_database():
 			item_data["USERNAME"]=request.form["username"]
 			item_data["USERPASSWORD"]=request.form["userpassword"]
 
-			temp["registeration_data"].append(item_data)
+			temp["registration_data"].append(item_data)
 			with open(reg_database,"w") as file:
 				json.dump(temp,file,indent=4)
 	
 			#return temp["registeration_data"]
 			return render_template("signin.html")
 		else:
-			return render_template("registerationpasserror.html")
+			return render_template("registrationpasserror.html")
 	else:
-		return render_template('registerationerror.html')
+		return render_template('registrationerror.html')
 
 	
 
@@ -80,8 +80,8 @@ def signin():
 		userpasswordin=request.form['userpassword']
 			
 		index=0
-		while index<len(temp.get("registeration_data")):
-			if usernamein==temp.get("registeration_data")[index].get("USERNAME") and userpasswordin==temp.get("registeration_data")[index].get("USERPASSWORD"):
+		while index<len(temp.get("registration_data")):
+			if usernamein==temp.get("registration_data")[index].get("USERNAME") and userpasswordin==temp.get("registration_data")[index].get("USERPASSWORD"):
 				return render_template("startpage.html")
 			index=index+1
 		return render_template("startpageerror.html")

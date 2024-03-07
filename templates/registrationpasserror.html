@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Register_Page</title>
+	<title>signin_page</title>
 	<style type="text/css">
 		body{
 			background-color:deepskyblue;
@@ -19,7 +20,7 @@
 
 		input{
 			background-color:lightblue;
-			font-size:25px;
+			font-size:20px;
 			font-weight:bold;
 		}
 
@@ -31,9 +32,14 @@
 			color:blue;
 		}
 	</style>
+	<script type="text/javascript">
+		function message(){
+			alert("Please make sure your password consists of 7 or more characters...")
+		}
+	</script>
 </head>
-<body>
-	<big><big><big><h1>Registration Page</h1></big></big></big>
+<body onload="message()">
+	<big><big><big><h1>Registeration Page</h1></big></big></big>
 	<form action="http://127.0.0.1:5000/register" method="POST">
 		<input type="text" name="firstname" placeholder="ENTER FIRST NAME"><br><br>
 		<input type="text" name="middlename" placeholder="ENTER MIDDLE NAME"><br><br>

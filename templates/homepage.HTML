@@ -3,20 +3,35 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='static/css/main.css')}}" />
 	<title></title>
 	<style type="text/css">
 		body{
+
 			background-color:deepskyblue;
 		}
 
 		#choose_div{
 			height:70px;
-			background-color:lightblue;
 			text-align:center;
 		}
 
 		#welcome_div{
 			text-align:center;
+		}
+
+		#inp1{
+			box-shadow:black 30px;
+			height:40px;
+			width:90px;
+			color:blue;
+			background-color:lightblue;
+		}
+
+		#inp2{
+			height:40px;
+			width:160px;
+			color:blue;
 			background-color:lightblue;
 		}
 	</style>
@@ -29,9 +44,9 @@
 		<big><big><big><label for="days">Please choose one </label></big></big></big>
 		<br><br>
 		<div>
-			<a href="http://127.0.0.1:5000/signin_page"><input type="button" name="signin" value="SIGN IN"></a>
+			<a href="http://127.0.0.1:5000/signin_page"><input id="inp1" type="button" name="signin" value="SIGN IN"></a>
 			<br><br>
-			<a href="http://127.0.0.1:5000/registeration_page"><input type="button" name="registeration" value="NEW REGISTERATION"></a>
+			<a href="http://127.0.0.1:5000/registration_page"><input id="inp2" type="button" name="registration" value="NEW REGISTRATION"></a>
 		</div>
 	</div>
 	<br>
