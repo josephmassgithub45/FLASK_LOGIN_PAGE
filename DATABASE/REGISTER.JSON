@@ -1,74 +1,20 @@
 {
-    "registration_data": [
-        {
-            "FIRSTNAME": "MOHAMED",
-            "MIDDLENAME": "VANDI",
-            "LASTNAME": "MASSAQUOI",
-            "GENDER": "MALE",
-            "CONTACT": "078986868",
-            "EMAIL": "josephmassaquoi45@gmail.com",
-            "USERNAME": "JOSEPH@BLW",
-            "USERPASSWORD": "24682468"
-        },
-        {
-            "FIRSTNAME": "MAYBEL",
-            "MIDDLENAME": "KADIE",
-            "LASTNAME": "VANDIE",
-            "GENDER": "FEMALE",
-            "CONTACT": "076936309",
-            "EMAIL": "MAYBEL@GMAIL.COM",
-            "USERNAME": "MAYBEL@BLW",
-            "USERPASSWORD": "076936309"
-        },
-        {
-            "FIRSTNAME": "PRINCE",
-            "MIDDLENAME": "",
-            "LASTNAME": "KAMARA",
-            "GENDER": "MALE",
-            "CONTACT": "076874234",
-            "EMAIL": "PRINCE@GMAIL.COM",
-            "USERNAME": "PRINCE@BLW",
-            "USERPASSWORD": "11224444"
-        },
-        {
-            "FIRSTNAME": "NASRATU",
-            "MIDDLENAME": "FATMATA",
-            "LASTNAME": "MARAH",
-            "GENDER": "FEMALE",
-            "CONTACT": "078479454",
-            "EMAIL": "nasratumarah@gmail.com",
-            "USERNAME": "MISSMARAH",
-            "USERPASSWORD": "123456789"
-        },
-        {
-            "FIRSTNAME": "UMU",
-            "MIDDLENAME": "",
-            "LASTNAME": "KAMARA",
-            "GENDER": "FEMALE",
-            "CONTACT": "076897345",
-            "EMAIL": "UMU@GMAIL.COM",
-            "USERNAME": "UMU@BLW",
-            "USERPASSWORD": "14921492"
-        },
-        {
-            "FIRSTNAME": "fgfhj",
-            "MIDDLENAME": "jkgjhgjhg",
-            "LASTNAME": "gjghjgj",
-            "GENDER": "hgjgjhghgj",
-            "CONTACT": "5765765765",
-            "EMAIL": "hjhgjgjhgjgjhg",
-            "USERNAME": "JOSEPH@BLW",
-            "USERPASSWORD": "24682468"
-        },
-        {
-            "FIRSTNAME": "MOHAMED",
-            "MIDDLENAME": "",
-            "LASTNAME": "KAMARA",
-            "GENDER": "MALE",
-            "CONTACT": "4365456245",
-            "EMAIL": "MOHAMED@123",
-            "USERNAME": "MOHAMED@BLW",
-            "USERPASSWORD": "123456789"
-        }
-    ]
+  "registration_data": [
+    {
+      "FIRSTNAME": "MOHAMED",
+      "MIDDLENAME": "VANDI",
+      "LASTNAME": "MASSAQUOI",
+      "GENDER": "MALE",
+      "CONTACT": "078986868",
+      "EMAIL": "josephmassaquoi45@gmail.com",
+      "USERNAME": "JOSEPH@BLW",
+      "USERPASSWORD": "24682468"
+    }
+  ],
+
+  "code_data": [
+    {
+      "CODE":"man@blw"
+    }
+  ]
 }

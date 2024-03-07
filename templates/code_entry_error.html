@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>code_entry</title>
+	<title>code_entry_error</title>
 	<style type="text/css">
 		body{
 			background-image:url({{url_for('static',filename='blue light waves  ai logo.jpg')}});
@@ -11,24 +11,25 @@
 			text-align:center;
 		}
 
-		input{
-			font-size:25px;
-			font-weight:bold;
+		button{
+			width:100px;
+			height:40px;
+		}
+
+		img{
+			height:10px;
+			width:40px;
 		}
 
 		h1{
 			color:white;
 		}
-
 	</style>
 </head>
 <body>
-	<big><big><h1>Enter Code</h1></big></big>
-	<form action="http://127.0.0.1:5000/submit_code" method="POST">
-		<input type="password" name="code_entry" >
-		<br><br>
-		<input type="submit" name="submitcode">
-	</form>
+	<big><big><h1>Incorrect Code</h1></big></big>
+	<a href="http://127.0.0.1:5000/code_entry"><button>BACK</button></a>
 </body>
 </html>
+
 

@@ -6,14 +6,19 @@
 	<title>signin_page</title>
 	<style type="text/css">
 		body{
+			background-image:url({{url_for('static',filename='blue light waves  ai logo.jpg')}});
+			background-size:cover;
 			text-align:center;
-			background-color:deepskyblue;
 			font-weight:bold;
 		}
 
 		input{
 			font-size:25px;
 			font-weight:bold;
+		}
+
+		h1,label{
+			color:white;
 		}
 	</style>
 </head>
@@ -24,7 +29,7 @@
 		<h1><label for="username">User Name</label></h1>
 		<input type="text" name="username" placeholder="Enter Name">
 		<h1><label for="userpassword">User Password</label></h1>
-		<input type="text" name="userpassword" placeholder="Enter Password">
+		<input type="password" name="userpassword" placeholder="Enter Password">
 		<br><br><br>
 		<input type="submit" name="button" value="Sign in">
 	</form>

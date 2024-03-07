@@ -13,11 +13,13 @@ server="http://127.0.0.1:5000"
 #PYTHON SIGN IN APP
 
 #----------------------DISPLAY ROUTES----------------------
+@app.route("/code_entry")
+def entry():
+	return render_template("index.html")
 
 @app.route("/home_page")
 def home():
 	return render_template("homepage.html")
-
 
 @app.route("/registration_page")
 def registeration():
@@ -68,6 +70,7 @@ def register_database():
 	else:
 		return render_template('registrationerror.html')
 
+
 	
 
 @app.route('/signin',methods = ['POST', 'GET'])
@@ -97,8 +100,25 @@ def signin():
 	   return render_template('signinerror.html')   
 
 
-if __name__ == "__main__":
-	app.run(debug=True)
 
+@app.route('/submit_code',methods = ['POST', 'GET'])
+def submission():
+	if request.method == 'POST' and len(request.form['code_entry'])>0:
+		with open(reg_database,"r") as file:
+			temp=json.load(file)
+
+		codein=request.form['code_entry']
+		
+		index=0
+		while index<len(temp.get("code_data")):
+			if codein==temp.get("code_data")[index].get("CODE"):
+				return render_template("homepage.html")
+			index=index+1
+		return render_template("code_entry_error.html")
+	else:
+		return render_template("code_entry_error.html")
+	
+if __name__ == "__main__":
+	app.run(debug=False,host='0.0.0.0')
 
 
