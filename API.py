@@ -11,7 +11,7 @@ app.config["SECRET_KEY"] = "blueflaskchat"
 socketio = SocketIO(app)
 
 '''
-server="http://127.0.0.1:5000"
+server="http://127.0.0.1:5000" 
 '''
 
 #111111111111111111111111111111111111111111111111111111111
