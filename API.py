@@ -23,6 +23,13 @@ server="http://127.0.0.1:5000"
 reg_database="DATABASE\REGISTER.JSON"
 
 
+#---------------------CHAT APP DEVELOPMENT------------------
+
+@app.route("/")
+def test():
+	return render_template("home.html")
+
+
 #----------------------TEMPLATE ROUTES----------------------
 
 @app.route("/code_entry") 
