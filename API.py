@@ -4,7 +4,7 @@ from flask_socketio import join_room,leave_room,send,SocketIO
 import random
 from string import ascii_uppercase
 
-reg_database="DATABASE\REGISTER.JSON"
+
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "blueflaskchat"
@@ -16,9 +16,12 @@ server="http://127.0.0.1:5000"
 
 #111111111111111111111111111111111111111111111111111111111
 
-#PYTHON SIGN IN APP
+#CREATION OF DATABASE
 
-#----------------------DISPLAY ROUTES----------------------
+reg_database="DATABASE\REGISTER.JSON"
+
+
+#----------------------TEMPLATE ROUTES----------------------
 
 @app.route("/code_entry")
 def entry():
