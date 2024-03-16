@@ -23,7 +23,7 @@ reg_database="DATABASE\REGISTER.JSON"
 
 #----------------------TEMPLATE ROUTES----------------------
 
-@app.route("/code_entry")
+@app.route("/code_entry") 
 def entry():
 	return render_template("index.html")
 
