@@ -10,6 +10,8 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "blueflaskchat"
 socketio = SocketIO(app)
 
+
+
 '''
 server="http://127.0.0.1:5000" 
 '''
@@ -130,6 +132,6 @@ def submission():
 		return render_template("code_entry_error.html")
 	
 if __name__ == "__main__":
-	app.run(debug=True)
+	socketio.run(app,debug=True)
 
 
