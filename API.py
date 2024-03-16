@@ -1,18 +1,25 @@
 from flask import Flask,redirect,url_for,request,render_template
 import json
+from flask_socketio import join_room,leave_room,send,SocketIO
+import random
+from string import ascii_uppercase
 
 reg_database="DATABASE\REGISTER.JSON"
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "blueflaskchat"
+socketio = SocketIO(app)
 
 '''
 server="http://127.0.0.1:5000"
 '''
+
 #111111111111111111111111111111111111111111111111111111111
 
 #PYTHON SIGN IN APP
 
 #----------------------DISPLAY ROUTES----------------------
+
 @app.route("/code_entry")
 def entry():
 	return render_template("index.html")
@@ -101,6 +108,7 @@ def signin():
 
 
 
+
 @app.route('/submit_code',methods = ['POST', 'GET'])
 def submission():
 	if request.method == 'POST' and len(request.form['code_entry'])>0:
@@ -119,6 +127,6 @@ def submission():
 		return render_template("code_entry_error.html")
 	
 if __name__ == "__main__":
-	app.run(debug=False,host='0.0.0.0')
+	app.run(debug=True)
 
 

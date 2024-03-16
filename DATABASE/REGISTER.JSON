@@ -1,20 +1,29 @@
 {
-  "registration_data": [
-    {
-      "FIRSTNAME": "MOHAMED",
-      "MIDDLENAME": "VANDI",
-      "LASTNAME": "MASSAQUOI",
-      "GENDER": "MALE",
-      "CONTACT": "078986868",
-      "EMAIL": "josephmassaquoi45@gmail.com",
-      "USERNAME": "JOSEPH@BLW",
-      "USERPASSWORD": "24682468"
-    }
-  ],
-
-  "code_data": [
-    {
-      "CODE":"man@blw"
-    }
-  ]
+    "registration_data": [
+        {
+            "FIRSTNAME": "MOHAMED",
+            "MIDDLENAME": "VANDI",
+            "LASTNAME": "MASSAQUOI",
+            "GENDER": "MALE",
+            "CONTACT": "078986868",
+            "EMAIL": "josephmassaquoi45@gmail.com",
+            "USERNAME": "JOSEPH@BLW",
+            "USERPASSWORD": "24682468"
+        },
+        {
+            "FIRSTNAME": "mohamed",
+            "MIDDLENAME": "t",
+            "LASTNAME": "koroma",
+            "GENDER": "male",
+            "CONTACT": "134765678",
+            "EMAIL": "mohamed@gmail.com",
+            "USERNAME": "mohamed",
+            "USERPASSWORD": "123456789"
+        }
+    ],
+    "code_data": [
+        {
+            "CODE": "man@blw"
+        }
+    ]
 }
