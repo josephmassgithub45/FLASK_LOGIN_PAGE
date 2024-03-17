@@ -39,7 +39,7 @@ def generate_unique_code(length):
 	return code
 
 @app.route("/",methods=["POST","GET"])
-def test():
+def home():
 	session.clear()
 	if request.method=="POST":
 		name=request.form.get("name")
@@ -70,6 +70,10 @@ def test():
 
 @app.route("/room")
 def room():
+	room = session.get("room")
+	if room is None or session.get("name") is None or room not in rooms:
+		return redirect(url_for("home"))
+	
 	return render_template("room.html")
 
 #----------------------TEMPLATE ROUTES----------------------
@@ -79,7 +83,7 @@ def entry():
 	return render_template("index.html")
 
 @app.route("/home_page")
-def home():
+def home_page():
 	return render_template("homepage.html")
 
 @app.route("/registration_page")
