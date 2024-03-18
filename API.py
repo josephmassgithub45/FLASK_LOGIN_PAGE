@@ -12,7 +12,6 @@ app.config["SECRET_KEY"] = "blueflaskchat"
 socketio = SocketIO(app)
 
 
-
 '''
 server="http://127.0.0.1:5000" 
 '''
@@ -38,6 +37,8 @@ def generate_unique_code(length):
 		
 	return code
 
+
+
 @app.route("/",methods=["POST","GET"])
 def home():
 	session.clear()
@@ -57,7 +58,7 @@ def home():
 		
 		if create != False:
 			room = generate_unique_code(4)
-			rooms["room"] = {"members":0,"messages":[]}
+			rooms[room] = {"members":0,"messages":[]}
 		
 		elif code not in rooms:
 			return render_template("home.html",error="Room does not exist",code=code,name=name)
