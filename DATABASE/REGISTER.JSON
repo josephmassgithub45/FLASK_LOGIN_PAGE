@@ -19,6 +19,16 @@
             "EMAIL": "mohamed@gmail.com",
             "USERNAME": "mohamed",
             "USERPASSWORD": "123456789"
+        },
+        {
+            "FIRSTNAME": "MAYBEL",
+            "MIDDLENAME": "KADIE",
+            "LASTNAME": "VANDI",
+            "GENDER": "FEMALE",
+            "CONTACT": "076936309",
+            "EMAIL": "maybel@gmail.com",
+            "USERNAME": "MAYBEL@BLW",
+            "USERPASSWORD": "076936309"
         }
     ],
     "code_data": [

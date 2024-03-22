@@ -38,7 +38,7 @@ def generate_unique_code(length):
 	return code
 
 
-@app.route("/",methods=["POST","GET"])
+@app.route("/base",methods=["POST","GET"])
 def home():
 	session.clear()
 	if request.method=="POST":
@@ -74,7 +74,7 @@ def room():
 	if room is None or session.get("name") is None or room not in rooms:
 		return redirect(url_for("home"))
 	
-	return render_template("room.html", code=room)
+	return render_template("room.html", code=room, messages=rooms[room]["messages"])
 
 
 @socketio.on("message")
@@ -216,7 +216,7 @@ def signin():
 		'''
 		
 	else:
-	   return render_template('signinerror.html')   
+		return render_template('signinerror.html')   
 
 
 
